@@ -1,0 +1,24 @@
+### 1️⃣ Check server is running
+GET http://localhost:8080/
+
+### 2️⃣ Signup user
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "email": "testuser@gmail.com",
+  "password": "test123"
+}
+
+### 3️⃣ Login user
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser@gmail.com",
+  "password": "test123"
+}
+
+### 4️⃣ Protected route (after login)
+GET http://localhost:8080/api/auth/me
+Authorization: Bearer <paste_your_token_here>
