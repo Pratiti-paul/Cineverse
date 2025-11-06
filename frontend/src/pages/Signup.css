@@ -1,59 +1,88 @@
-/* Signup.css */
-
-.signup-container {
+.auth-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
+  background-color: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
   font-family: "Poppins", sans-serif;
 }
 
-.signup-box {
-  background-color: rgba(255, 255, 255, 0.12);
-  padding: 40px 50px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  text-align: center;
+.auth-box {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 40px 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 350px;
+  text-align: center;
 }
 
-.signup-box h2 {
+.auth-title {
   margin-bottom: 25px;
+  font-size: 24px;
+  color: #d4cccc;
 }
 
-.signup-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-.signup-box input {
-  padding: 12px;
-  border-radius: 8px;
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #cac7c7;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  outline: none;
-  font-size: 1rem;
-}
-
-.signup-box button {
-  background-color: #ffcc00;
-  color: black;
-  font-weight: 600;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.signup-box button:hover {
-  background-color: #ffd633;
+.auth-btn:hover {
+  background-color: #0056b3;
 }
 
 .message {
   margin-top: 15px;
-  color: #fff;
-  font-size: 0.95rem;
+  font-size: 14px;
+}
+
+.message.success {
+  color: green;
+}
+
+.message.error {
+  color: red;
+}
+
+.redirect-text {
+  margin-top: 20px;
+  color: #c0bdbd;
+  font-size: 14px;
+}
+
+.redirect-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.redirect-text a:hover {
+  text-decoration: underline;
 }
