@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
 
@@ -6,6 +7,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,6 +17,8 @@ function Login() {
         password,
       });
       setMessage(res.data.message || "Login successful!");
+      const name = res.data?.user?.name || email;
+      navigate("/welcome", { state: { name } });
     } catch (err) {
       setMessage(err.response?.data?.message || "Login failed");
     }
