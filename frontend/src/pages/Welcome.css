@@ -1,0 +1,9 @@
+welcome-container{
+    display: "flex";
+    align-items: "center";
+    justify-content: center;
+    height: 100vh;
+    font-family: "Poppins, sans-serif";
+    color: #eaeaea;
+    background-color: "linear-gradient(135deg, #2c5364, #203a43, #0f2027)";
+}
